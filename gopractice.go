@@ -100,7 +100,6 @@ func main() {
 	//calling return_kmh method
 	fmt.Println(a_car.return_kmh())
 	fmt.Println(a_car.return_mph())
-
 }
 
 //(name type, name type) return type{}
