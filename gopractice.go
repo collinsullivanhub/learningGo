@@ -97,6 +97,8 @@ func main() {
 				 steering_wheel: 12561,
 				 top_speed_kmh: 225.0}
 	fmt.Println(a_car.gas_pedal)
+	//calling return_kmh method
+	fmt.Println(a_car.return_kmh())
 
 }
 
@@ -127,7 +129,7 @@ type car struct {
 	top_speed_kmh float64
 }
 //c can be whateveh, since this function is referencing a struct it is a method
-func (c car) kmh() float64 {
+func (c car) return_kmh() float64 {
 	return float64(c.gas_pedal) * (c.top_speed_kmh/usixteenbitmax)
 }
 
