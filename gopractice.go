@@ -99,10 +99,11 @@ func main() {
 	fmt.Println(a_car.gas_pedal)
 	//calling return_kmh method
 	fmt.Println(a_car.return_kmh())
+	fmt.Println(a_car.return_mph())
 
 }
 
-//func sum(name type, name type) type{}
+//(name type, name type) return type{}
 func sumFunc(x int, y int) int{
 	return x + y
 }
@@ -133,5 +134,6 @@ func (c car) return_kmh() float64 {
 	return float64(c.gas_pedal) * (c.top_speed_kmh/usixteenbitmax)
 }
 
-
-
+func (c car) return_mph() float64 {
+	return float64(c.gas_pedal) * (c.top_speed_kmh/usixteenbitmax/kmh_multiple)
+}
