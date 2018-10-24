@@ -86,10 +86,10 @@ func main() {
 
 	//Memory
 	meep := 7
-	fmt.Println(meep)
-	meep2 := &meep //memory address
-	fmt.Println(meep2)
-	fmt.Println(*meep2)
+	fmt.Println(meep) //prints 7
+	meep2 := &meep 
+	fmt.Println(meep2) //prints memory address
+	fmt.Println(*meep2) //prints 7
 
 	//object of car struct
 	a_car := car{gas_pedal: 22341,
@@ -113,6 +113,13 @@ type device struct{
 	age int
 	ipAddress string
 	isOn bool
+}
+
+type IOSRouter struct {
+	name string
+	mgmt_ip string
+	isOn bool
+	code int32
 }
 
 //methods
