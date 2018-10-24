@@ -39,16 +39,16 @@ func main() {
 	fmt.Println("Printing array two: ")
 	fmt.Println(arrayTwo)
 
-	//slices
+	//Slices
 
-	//maps, kind of like dictionaries
+	//Maps
 	myMap := make(map[string]int)
 	myMap["ios"] = 256
 	myMap["iosxr"] = 31
 	myMap["iosxe"] = 42
 	fmt.Println(myMap)
 
-	//looping
+	//Looping
 	for i := 0; i < 6; i++ {
 		fmt.Println(i)
 	}
@@ -70,10 +70,10 @@ func main() {
 	fmt.Println(d1.ipAddress)
 	fmt.Println(d1.isOn)
 
-	//logging
+	//Logging
 	log.Print("logging...") 
 
-	//Open a file
+	//Files
 	b, err := ioutil.ReadFile("file1.txt")
 	if err != nil {
 		fmt.Print(err)
@@ -122,7 +122,7 @@ type IOSRouter struct {
 	code int32
 }
 
-//methods 
+//Methods 
 //value receivers = calculations on values 
 //pointer receivers = modifying values from a struct
 
@@ -143,3 +143,5 @@ func (c car) return_kmh() float64 {
 func (c car) return_mph() float64 {
 	return float64(c.gas_pedal) * (c.top_speed_kmh/usixteenbitmax/kmh_multiple)
 }
+
+
