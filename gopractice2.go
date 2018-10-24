@@ -18,6 +18,14 @@ func main() {
 
 	//Recursion
 	fmt.Println(fact(7))
+
+	//Pointers
+	s := device{name:"IOS",age:23}
+	fmt.Println(s.name) // IOS
+	sp := &s
+	fmt.Println(sp.age) //23
+	sp.age = 24
+	fmt.Println(sp.age) //24
 }
 
 //Anonymous function 
@@ -36,4 +44,10 @@ func fact(n int) int {
 	}
 	return n * fact(n-1)
 }
+
+type device struct {
+	name string
+	age int
+}
+
 
