@@ -143,5 +143,3 @@ func (c car) return_kmh() float64 {
 func (c car) return_mph() float64 {
 	return float64(c.gas_pedal) * (c.top_speed_kmh/usixteenbitmax/kmh_multiple)
 }
-
-
