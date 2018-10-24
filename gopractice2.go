@@ -10,14 +10,12 @@ func main() {
 
 	//Anonymous functions
 	nextInt := intSeq()
-	fmt.Println(nextInt())
-	fmt.Println(nextInt())
-	fmt.Println(nextInt())
-	//prints 1,2,3
+	fmt.Println(nextInt())	//prints 1
+	fmt.Println(nextInt())	//prints 2
+	fmt.Println(nextInt())  //prints 3
 
 	nextInt2 := intSeq()
-	fmt.Println(nextInt2())
-	//prints 1
+	fmt.Println(nextInt2()) //prints 1
 
 	//Recursion
 	fmt.Println(fact(7))
