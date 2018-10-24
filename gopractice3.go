@@ -7,6 +7,8 @@ import (
 "sync"
 )
 
+//Concurrency
+
 func main(){
 
 	var waitYO sync.WaitGroup
