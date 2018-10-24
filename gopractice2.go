@@ -62,4 +62,3 @@ func say(s string) {
 		fmt.Println(s)
 	}
 }
-
