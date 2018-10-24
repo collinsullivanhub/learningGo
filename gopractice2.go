@@ -1,7 +1,10 @@
 
 package main 
 
-import ("fmt")
+import (
+"fmt"
+"time"
+)
 
 func main() {
 
@@ -26,6 +29,10 @@ func main() {
 	fmt.Println(sp.age) //23
 	sp.age = 24
 	fmt.Println(sp.age) //24
+
+	//Goroutine function calls
+	go say("world")
+	say("hello")
 }
 
 //Anonymous function 
@@ -50,4 +57,11 @@ type device struct {
 	age int
 }
 
+//Goroutines 
+func say(s string) {
+	for i:=0; i < 1; i++{
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println(s)
+	}
+}
 
