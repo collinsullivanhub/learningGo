@@ -31,6 +31,14 @@ func main() {
 	//Goroutine function calls
 	go say("world")
 	say("hello")
+	
+	//Make a channel of the int type
+	channelOne := make(chan int)
+	go foo(channelOne, 5)
+	go foo(channelOne, 3)
+	v1 := <- channelOne
+	v2 := <- channelOne
+	fmt.Println(v1, v2)
 }
 
 //Anonymous function 
@@ -62,3 +70,10 @@ func say(s string) {
 		fmt.Println(s)
 	}
 }
+
+//Channels
+func foo(c chan int, someValue int){
+	c <- someValue * 5
+}
+
+
