@@ -28,9 +28,10 @@ func main() {
 	sp.age = 24
 	fmt.Println(sp.age) //24
 
-	//Goroutine function calls
-	go say("world")
-	say("hello")
+	//Goroutine say function call
+	go say("this call is as a goroutine: world")
+	//normal say function call
+	say("this is calling the function normally: hello")
 	
 	//Make a channel of the int type
 	channelOne := make(chan int)
@@ -75,5 +76,7 @@ func say(s string) {
 func foo(c chan int, someValue int){
 	c <- someValue * 5
 }
+
+
 
 
