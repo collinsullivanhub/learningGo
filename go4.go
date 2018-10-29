@@ -75,10 +75,11 @@ type NexusSwtichStruct struct{
 
 func main() {
 
-	nexusrouter1 := NexusRouterStruct{name: "AS-RTP-TS-R-114",
+	nexusrouter1 := NexusRouterStruct{hostname: "AS-RTP-TS-R-114",
 	ipAddress: "10.122.24.36",
 	managementInterface: "mgmt0",
-	poweredOn:true}
+	poweredOn:true,
+	codeVersion:"19.4.23"}
 
 	IpAddressList := []string{
 	"10.122.16.142",
@@ -103,5 +104,4 @@ func main() {
 		fmt.Println("%s\n", ip)
 	}
 }
-
 
