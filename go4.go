@@ -9,7 +9,7 @@ import (
 
 //Device Structs
 
-type IOSRouterStruct {
+type IOSRouterStruct struct{
 	hostname string
 	ipAddress string
 	managementInterface string
@@ -17,7 +17,7 @@ type IOSRouterStruct {
 	codeVersion string
 }
 
-type IOSXrRouterStruct {
+type IOSXrRouterStruct struct{
 	hostname string
 	ipAddress string
 	managementInterface string
@@ -25,7 +25,7 @@ type IOSXrRouterStruct {
 	codeVersion string
 }
 
-type IOSxeRouterStruct {
+type IOSxeRouterStruct struct{
 	hostname string
 	ipAddress string
 	managementInterface string
@@ -33,7 +33,7 @@ type IOSxeRouterStruct {
 	codeVersion string
 }
 
-type NexusRouterStruct {
+type NexusRouterStruct struct{
 	hostname string
 	ipAddress string
 	managementInterface string
@@ -41,7 +41,7 @@ type NexusRouterStruct {
 	codeVersion string
 }
 
-type IOSSwitchStruct {
+type IOSSwitchStruct struct{
 	hostname string
 	ipAddress string
 	managementInterface string
@@ -49,7 +49,7 @@ type IOSSwitchStruct {
 	codeVersion string
 }
 
-type IOSXrSwitchStruct {
+type IOSXrSwitchStruct struct{
 	hostname string
 	ipAddress string
 	managementInterface string
@@ -57,7 +57,7 @@ type IOSXrSwitchStruct {
 	codeVersion string
 }
 
-type IOSxeSwitchStruct {
+type IOSxeSwitchStruct struct{
 	hostname string
 	ipAddress string
 	managementInterface string
@@ -65,7 +65,7 @@ type IOSxeSwitchStruct {
 	codeVersion string
 }
 
-type NexusSwtichStruct {
+type NexusSwtichStruct struct{
 	hostname string
 	ipAddress string
 	managementInterface string
@@ -74,28 +74,29 @@ type NexusSwtichStruct {
 }
 
 
-nexusrouter1 := NexusRouterStruct{
-	name: "AS-RTP-TS-R-114"
-	ipAddress: "10.122.24.36"
-	managementInterface: "mgmt0"
+
+
+func main() {
+
+	nexusrouter1 := NexusRouterStruct{name: "AS-RTP-TS-R-114",
+	ipAddress: "10.122.24.36",
+	managementInterface: "mgmt0",
 	poweredOn:True
-}
+	}
 
-IpAddressList := []string{
+	IpAddressList := []string{
 	"10.122.16.142"
 	"10.122.15.133"
 	"10.122.12.142"
 	"10.122.21.224"
-}
-
-func main() {
+	}
 
 	fmt.Println(time.Now().Format(time.RFC850))
 
 	byteIP := make([]net.IP, 0, len(IpAddressList))
 
 	//IP String to bytes
-	
+
 	for _, ip := range IpAddressList {
 		byteIP = append(byteIP, net.ParseIP(ip))
 	}
@@ -107,3 +108,5 @@ func main() {
 		fmt.Println("%s\n", ip)
 	}
 }
+
+
