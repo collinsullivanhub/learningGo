@@ -81,15 +81,13 @@ func main() {
 	nexusrouter1 := NexusRouterStruct{name: "AS-RTP-TS-R-114",
 	ipAddress: "10.122.24.36",
 	managementInterface: "mgmt0",
-	poweredOn:True
-	}
+	poweredOn:true}
 
 	IpAddressList := []string{
-	"10.122.16.142"
-	"10.122.15.133"
-	"10.122.12.142"
-	"10.122.21.224"
-	}
+	"10.122.16.142",
+	"10.122.15.133",
+	"10.122.12.142",
+	"10.122.21.224"}
 
 	fmt.Println(time.Now().Format(time.RFC850))
 
