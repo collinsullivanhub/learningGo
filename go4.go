@@ -73,9 +73,6 @@ type NexusSwtichStruct struct{
 	codeVersion string
 }
 
-
-
-
 func main() {
 
 	nexusrouter1 := NexusRouterStruct{name: "AS-RTP-TS-R-114",
