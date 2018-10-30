@@ -3,8 +3,6 @@ package main
 import (
 "fmt"
 "time"
-"net"
-"sort"
 )
 
 //Device Structs
@@ -81,6 +79,8 @@ func main() {
 	poweredOn:true,
 	codeVersion:"19.4.23"}
 
+	fmt.Println(nexusrouter1.hostname)
+
 	IpAddressList := []string{
 	"10.122.16.142",
 	"10.122.15.133",
@@ -88,20 +88,15 @@ func main() {
 	"10.122.21.224"}
 
 	fmt.Println(time.Now().Format(time.RFC850))
+	fmt.Println(IpAddressList)
 
-	byteIP := make([]net.IP, 0, len(IpAddressList))
-
-	//IP String to bytes
-
-	for _, ip := range IpAddressList {
-		byteIP = append(byteIP, net.ParseIP(ip))
-	}
-
-	sort.Slice(byteIP, func(i, j int) bool {
-		return bytes.Compare(byteIP[i], byteIP[j]) < 0
-		})
-	for _, ip := range byteIP{
-		fmt.Println("%s\n", ip)
-	}
+	//infinite loop
+	//for {
+	//	fmt.Println("hi")
+	//}
+	
 }
+
+
+
 
